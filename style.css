@@ -1,0 +1,48 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#bcsaibird {
+    width: 400px;
+    height: 500px;
+    border: 1px solid black;
+    margin: auto;
+    overflow: hidden;
+}
+
+#obstacle {
+    width: 50px;
+    height: 500px;
+    background-color: black;
+    position: relative;
+    animation: obstacle 2s infinite linear;
+}
+
+@keyframes obstacle {
+    0% {
+        left: 400px
+    }
+
+    100% {
+        left: -50px
+    }
+}
+
+#empty {
+    width: 50px;
+    height: 150px;
+    background-color: white;
+    position: relative;
+    top: -500px;
+    animation: obstacle 2s infinite linear;
+}
+
+#bird {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 100px;
+    border-radius: 50%;
+    border-color: red;
+}
