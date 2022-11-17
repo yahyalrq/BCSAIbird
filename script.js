@@ -1,4 +1,5 @@
 var obstacle = document.getElementById("obstacle");
+var subject = document.getElementById("subject");
 var empty = document.getElementById("empty");
 var bird = document.getElementById("bird");
 var jumping = 0;
@@ -14,10 +15,12 @@ setInterval(function () {
     if (jumping == 0) {
         bird.style.top = (birdTop + 3) + "px";
     }
-    var obstacleLeft = parseInt(window.getComputedStyle(obstacle).getPropertyValue("left"));
+    var obstaclee = parseInt(window.getComputedStyle(obstacle).getPropertyValue("left"));
+    var subjectt = parseInt(window.getComputedStyle(subject).getPropertyValue("left"));
+    var subjectt = parseInt(window.getComputedStyle(subject));
     var emptyTop = parseInt(window.getComputedStyle(empty).getPropertyValue("top"));
     var cTop = -(500 - birdTop);
-    if ((birdTop > 480) || ((obstacleLeft < 20) && (obstacleLeft > -50) && ((cTop < emptyTop) || (cTop > emptyTop + 130)))) {
+    if ((birdTop > 480) || ((obstaclee < 20) && (obstaclee > -50) && ((cTop < emptyTop) || (cTop > emptyTop + 130)))) {
         alert("Bcsaibird over. Score: " + (counter - 1));
         bird.style.top = 100 + "px";
         counter = 0;

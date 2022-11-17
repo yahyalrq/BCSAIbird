@@ -19,6 +19,15 @@
     animation: obstacle 2s infinite linear;
 }
 
+#subject {
+    padding-top: 30px;
+    position: relative;
+    transform: rotate(90deg);
+    z-index: 1000;
+    font-size: 20px;
+    color: greenyellow;
+}
+
 @keyframes obstacle {
     0% {
         left: 400px
@@ -28,6 +37,7 @@
         left: -50px
     }
 }
+
 
 #empty {
     width: 50px;
